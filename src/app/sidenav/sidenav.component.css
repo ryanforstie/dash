@@ -1,6 +1,9 @@
-.example-container {
-  width: 400px;
-  height: 200px;
-  margin: 10px;
-  border: 1px solid #555;
+.mat-drawer-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mat-drawer {
+  width: 20%;
+  background-color: #3f51b5;
 }
