@@ -8,9 +8,10 @@ import { AppComponent } from "./app.component";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { WinnerComponent } from './winner/winner.component';
+import { FroggysComponent } from './froggys/froggys.component';
 
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, DashboardComponent, WinnerComponent],
+  declarations: [AppComponent, SidenavComponent, DashboardComponent, WinnerComponent, FroggysComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
