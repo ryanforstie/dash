@@ -1,9 +1,21 @@
-.mat-drawer-container {
+mat-drawer-container {
   width: 100%;
   height: 100%;
 }
 
-.mat-drawer {
+mat-drawer {
   width: 20%;
   background-color: #3f51b5;
+  padding: 10px 0;
+}
+
+mat-drawer-content {
+  margin: 0;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  padding: 10px 0;
 }
