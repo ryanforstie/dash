@@ -11,3 +11,12 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.section-header {
+  text-align: center;
+}
+.section-hero {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
