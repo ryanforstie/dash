@@ -5,14 +5,21 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
-import { SidenavComponent } from "./sidenav/sidenav.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { WinnerComponent } from './winner/winner.component';
-import { FroggysComponent } from './froggys/froggys.component';
-import { GoalsComponent } from './goals/goals.component';
+import { SidenavComponent } from "./components/sidenav/sidenav.component";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { WinnerComponent } from "./components/winner/winner.component";
+import { FroggysComponent } from "./components/froggys/froggys.component";
+import { GoalsComponent } from "./components/goals/goals.component";
 
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, DashboardComponent, WinnerComponent, FroggysComponent, GoalsComponent],
+  declarations: [
+    AppComponent,
+    SidenavComponent,
+    DashboardComponent,
+    WinnerComponent,
+    FroggysComponent,
+    GoalsComponent
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
