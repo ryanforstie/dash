@@ -1,0 +1,7 @@
+<div [class.is-completed]="goal.completed">
+  <p>
+    <input (change)="onToggle(goal)" type="checkbox" />
+    {{ goal.goal }}
+    <button (click)="onDelete(goal)" class="del">x</button>
+  </p>
+</div>
