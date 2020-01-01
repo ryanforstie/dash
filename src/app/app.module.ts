@@ -10,6 +10,7 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { WinnerComponent } from "./components/winner/winner.component";
 import { FroggysComponent } from "./components/froggys/froggys.component";
 import { GoalsComponent } from "./components/goals/goals.component";
+import { GoalItemComponent } from './components/goal-item/goal-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GoalsComponent } from "./components/goals/goals.component";
     DashboardComponent,
     WinnerComponent,
     FroggysComponent,
-    GoalsComponent
+    GoalsComponent,
+    GoalItemComponent
   ],
   imports: [
     AppRoutingModule,

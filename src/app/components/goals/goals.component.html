@@ -1,7 +1,5 @@
 <h2>My Goals</h2>
-<ol>
-  <li *ngFor="let goal of goals">{{ goal.goal }}</li>
-</ol>
+<app-goal-item *ngFor="let goal of goals" [goal]="goal"></app-goal-item>
 
 <div>
   <input type="Add a goal" />
