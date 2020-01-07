@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { GOALS } from "../../mock-goals";
+import { GoalService } from "../../services/goal.service";
+import { Goal } from "../../models/goal";
 
 @Component({
   selector: "app-goals",
@@ -7,9 +8,26 @@ import { GOALS } from "../../mock-goals";
   styleUrls: ["./goals.component.css"]
 })
 export class GoalsComponent implements OnInit {
-  goals = GOALS;
+  goals: Goal[];
 
-  constructor() {}
+  constructor(private goalService: GoalService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.goalService.getGoals().subscribe(goals => {
+      this.goals = goals;
+    });
+  }
+
+  deleteGoal(goal: Goal) {
+    // Delete in UI
+    this.goals = this.goals.filter(g => g.id !== goal.id);
+    // Delete from server
+    this.goalService.deleteGoal(goal).subscribe();
+  }
+
+  addGoal(goal: Goal) {
+    this.goalService.addGoal(goal).subscribe(goal => {
+      this.goals.push(goal);
+    });
+  }
 }

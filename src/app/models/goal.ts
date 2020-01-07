@@ -1,4 +1,5 @@
 export class Goal {
-  goal: string;
+  id: number;
+  title: string;
   completed: boolean;
 }

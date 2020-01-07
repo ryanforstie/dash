@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 import { Goal } from "src/app/models/goal";
+import { GoalService } from "../../services/goal.service";
 
 @Component({
   selector: "app-goal-item",
@@ -8,16 +9,22 @@ import { Goal } from "src/app/models/goal";
 })
 export class GoalItemComponent implements OnInit {
   @Input() goal: Goal;
+  @Output() deleteGoal: EventEmitter<Goal> = new EventEmitter();
 
-  constructor() {}
+  constructor(private goalService: GoalService) {}
 
   ngOnInit() {}
 
   onToggle(goal) {
+    // Toggle in UI
     goal.completed = !goal.completed;
+    // Toggle on server
+    this.goalService.toggleCompleted(goal).subscribe(goal => {
+      console.log(goal);
+    });
   }
 
   onDelete(goal) {
-    console.log("delete");
+    this.deleteGoal.emit(goal);
   }
 }

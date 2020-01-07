@@ -1,7 +1,8 @@
 <h2>My Goals</h2>
-<app-goal-item *ngFor="let goal of goals" [goal]="goal"></app-goal-item>
 
-<div>
-  <input type="Add a goal" />
-  <button (click)="add(goal.value); goal.value = ''">Add</button>
-</div>
+<app-add-goal (addGoal)="addGoal($event)"></app-add-goal>
+<app-goal-item
+  *ngFor="let goal of goals"
+  [goal]="goal"
+  (deleteGoal)="deleteGoal($event)"
+></app-goal-item>
